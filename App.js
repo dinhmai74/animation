@@ -64,6 +64,7 @@ const DATA = [
 
 export default class App extends Component {
   renderCard(card) {
+      console.log(`uri :${card.uri}`)
       return (
           <Card 
             title={card.text}
@@ -90,16 +91,15 @@ export default class App extends Component {
   render() {
     return (
       <View>
-
           <View style={styles.header}>
               <Text>
                   Header
               </Text>
           </View>
-        <Deck 
-            data={DATA}
-            renderCard={this.renderCard}
-        />
+          <Deck 
+              data={DATA}
+            renderCard={ this.renderCard }
+          />
      </View>
     );
   }
